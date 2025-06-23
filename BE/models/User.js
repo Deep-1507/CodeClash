@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   contacts: { type: [contactSchema], required: true, maxLength: 3 },
+  distress:{type:Number,maxLength:1}
 });
 
 userSchema.pre("save", async function (next) {
